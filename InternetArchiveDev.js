@@ -103,7 +103,7 @@ var relevantTitlePartMatch = title.match(/^(.*?)(?:\sS\d{2}E\d{2}|\s\d{4})/i);
 
 
                         if (query.toLowerCase().indexOf('duel') !== -1 && file.name.toLowerCase().indexOf('duel_1971.mp4') !== -1 ) {continue;}
-                        if (query.toLowerCase().indexOf('uncle buck') !== -1 && file.name.toLowerCase().indexOf('bbc') !== -1 ) {continue;}
+                        if (query.toLowerCase().indexOf('uncle buck') !== -1 && file.name.toLowerCase().indexOf('bbc') !== -1 ) {quality = "480p";}
                         if (query.toLowerCase().indexOf('trains and automobiles') !== -1 && file.name.toLowerCase().indexOf(".ia.mp4") === -1) {continue;}
 
                         //page.appendItem("", "separator", { title: "File Found: " + file.name });
