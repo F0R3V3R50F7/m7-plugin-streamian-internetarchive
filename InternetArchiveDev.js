@@ -131,7 +131,7 @@ var relevantTitlePartMatch = title.match(/^(.*?)(?:\sS\d{2}E\d{2}|\s\d{4})/i);
                         if (episodeIdentifier && file.name.toLowerCase().indexOf(episodeIdentifier[0].toLowerCase()) !== -1 && isVideoFile) {
                             foundFile = true;
                             var videoLink = "https://archive.org/download/" + doc.identifier + "/" + encodeURIComponent(file.name);
-                            matchedFiles.push({ title: file.name, item: videoLink, quality: quality });
+                            matchedFiles.push({ title: file.name, item: videoLink, quality: quality, codec: codec });
                         } else if (isVideoFile) {
                             var queryWords = cleanedQuery.toLowerCase().split(/\s+/);
 
@@ -139,7 +139,7 @@ var relevantTitlePartMatch = title.match(/^(.*?)(?:\sS\d{2}E\d{2}|\s\d{4})/i);
                                 return file.name.toLowerCase().indexOf(word) !== -1;
                             })) {
                                 var videoLink = "https://archive.org/download/" + doc.identifier + "/" + encodeURIComponent(file.name);
-                                nonMatchedFiles.push({ title: file.name, item: videoLink, quality: quality });
+                                nonMatchedFiles.push({ title: file.name, item: videoLink, quality: quality, codec: codec });
                             }
                         }
                     }
