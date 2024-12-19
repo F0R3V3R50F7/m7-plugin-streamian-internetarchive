@@ -117,8 +117,8 @@ var relevantTitlePartMatch = title.match(/^(.*?)(?:\sS\d{2}E\d{2}|\s\d{4})/i);
                         var excludeAnimated = relevantTitlePart.indexOf('trailer park boys out of the park') === -1 && titleForCheck.indexOf('trailer park boys out of the park') !== -1;
                         if (excludeAnimated) continue;
 
-                        if (service.H265Filter && /[xXhH]265/i.test(file.name)) {continue;}
-
+                        if (/[xXhH]265/i.test(file.name)) {var codec = 'H265';};
+                        /*
                         var quality = "Unknown";
                         if (/1080p/i.test(titleForCheck)){
                             quality = "1080p";
@@ -126,7 +126,7 @@ var relevantTitlePartMatch = title.match(/^(.*?)(?:\sS\d{2}E\d{2}|\s\d{4})/i);
                             quality = "720p";
                         } else if (/XviD/i.test(titleForCheck)){
                             quality = "480p";
-                        }
+                        }*/
 
                         if (episodeIdentifier && file.name.toLowerCase().indexOf(episodeIdentifier[0].toLowerCase()) !== -1 && isVideoFile) {
                             foundFile = true;
@@ -154,7 +154,7 @@ var relevantTitlePartMatch = title.match(/^(.*?)(?:\sS\d{2}E\d{2}|\s\d{4})/i);
                     var seederCount = '60'; // Dummy value - since we're not actually dealing with torrents
                     //page.appendItem("", "separator", { title: "Quality Selected: " + quality });
 
-                    var item = magnetLink + " - " + quality + " - " + seederCount;
+                    var item = magnetLink + " - " + quality || 'Unknown' + " - " + seederCount;
                     results.push(item);
                 }
             } else {
@@ -170,7 +170,7 @@ var relevantTitlePartMatch = title.match(/^(.*?)(?:\sS\d{2}E\d{2}|\s\d{4})/i);
                         var seederCount = '60'; // Dummy value - since we're not actually dealing with torrents
                         //page.appendItem("", "separator", { title: "Quality Selected: " + quality });
 
-                        var item = magnetLink + " - " + quality + " - " + seederCount;
+                        var item = magnetLink + " - " + quality || 'Unknown' + " - " + seederCount;
                         results.push(item);
                     }
                 } else {
