@@ -151,10 +151,11 @@ var relevantTitlePartMatch = title.match(/^(.*?)(?:\sS\d{2}E\d{2}|\s\d{4})/i);
                 for (var i = 0; i < matchedFiles.length; i++) {
                     var magnetLink = matchedFiles[i].item;
                     var quality = matchedFiles[i].quality;
+                    var codec = matchedFiles[i].codec;
                     var seederCount = '60'; // Dummy value - since we're not actually dealing with torrents
                     //page.appendItem("", "separator", { title: "Quality Selected: " + quality });
 
-                    var item = magnetLink + " - " + quality || 'Unknown' + " - " + seederCount;
+                    var item = magnetLink + " - " + quality || 'Unknown' + " - " + seederCount + " - " + codec;
                     results.push(item);
                 }
             } else {
@@ -167,10 +168,11 @@ var relevantTitlePartMatch = title.match(/^(.*?)(?:\sS\d{2}E\d{2}|\s\d{4})/i);
                     for (var i = 0; i < nonMatchedFiles.length; i++) {
                         var magnetLink = nonMatchedFiles[i].item;
                         var quality = nonMatchedFiles[i].quality;
+                        var codec = nonMatchedFiles[i].codec;
                         var seederCount = '60'; // Dummy value - since we're not actually dealing with torrents
                         //page.appendItem("", "separator", { title: "Quality Selected: " + quality });
 
-                        var item = magnetLink + " - " + quality || 'Unknown' + " - " + seederCount;
+                        var item = magnetLink + " - " + quality || 'Unknown' + " - " + seederCount + " - " + codec;
                         results.push(item);
                     }
                 } else {
