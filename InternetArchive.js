@@ -1,1 +1,191 @@
-function _0x1162(_0x4896e1,_0xcabf55){var _0x74e701=_0x74e7();return _0x1162=function(_0x11627b,_0xc33d39){_0x11627b=_0x11627b-0x115;var _0x540c73=_0x74e701[_0x11627b];return _0x540c73;},_0x1162(_0x4896e1,_0xcabf55);}var _0x5200cd=_0x1162;(function(_0x5edbcb,_0x4b9f43){var _0x7c0520=_0x1162,_0x59c144=_0x5edbcb();while(!![]){try{var _0xf73f4e=parseInt(_0x7c0520(0x11a))/0x1+-parseInt(_0x7c0520(0x122))/0x2*(-parseInt(_0x7c0520(0x134))/0x3)+parseInt(_0x7c0520(0x119))/0x4*(-parseInt(_0x7c0520(0x147))/0x5)+-parseInt(_0x7c0520(0x135))/0x6*(parseInt(_0x7c0520(0x144))/0x7)+-parseInt(_0x7c0520(0x123))/0x8*(-parseInt(_0x7c0520(0x120))/0x9)+-parseInt(_0x7c0520(0x129))/0xa+parseInt(_0x7c0520(0x148))/0xb;if(_0xf73f4e===_0x4b9f43)break;else _0x59c144['push'](_0x59c144['shift']());}catch(_0x37561c){_0x59c144['push'](_0x59c144['shift']());}}}(_0x74e7,0x8cd7f),page[_0x5200cd(0x132)]=!![]);var relevantTitlePartMatch=title[_0x5200cd(0x13c)](/^(.*?)(?:\sS\d{2}E\d{2}|\s\d{4})/i),relevantTitlePart=relevantTitlePartMatch[0x1][_0x5200cd(0x145)]()[_0x5200cd(0x152)]()[_0x5200cd(0x130)](/\./g,'\x20')[_0x5200cd(0x130)](/[\-:]/g,''),hasEpisodeIdentifier=/S\d{2}E\d{2}/i['test'](title),queryIdentifierMatch=title[_0x5200cd(0x13c)](/\s(S\d{2}E\d{2})/i);console['log'](_0x5200cd(0x128)+relevantTitlePart);if(queryIdentifierMatch){var queryIdentifier=queryIdentifierMatch[0x1][_0x5200cd(0x145)]()[_0x5200cd(0x152)]();console[_0x5200cd(0x146)]('Internet\x20Archive\x20|\x20Query\x20Identifier:\x20'+queryIdentifier);}else{var queryIdentifier=title[_0x5200cd(0x13c)](/\b(19\d{2}|20\d{2})\b/);queryIdentifier?(queryIdentifier=queryIdentifier[0x0],console['log'](_0x5200cd(0x140)+queryIdentifier)):console[_0x5200cd(0x146)](_0x5200cd(0x118));}if(title[_0x5200cd(0x152)]()[_0x5200cd(0x115)](_0x5200cd(0x13b))!==-0x1)modifiedTitle='doopey\x20poopy';else{if(title[_0x5200cd(0x152)]()['indexOf'](_0x5200cd(0x139))!==-0x1)modifiedTitle=_0x5200cd(0x150);else{if(title['toLowerCase']()[_0x5200cd(0x115)](_0x5200cd(0x124))!==-0x1)modifiedTitle=_0x5200cd(0x11d);else hasEpisodeIdentifier?modifiedTitle=relevantTitlePart:modifiedTitle=title;}}console['log'](_0x5200cd(0x149)+modifiedTitle);var apiUrl=_0x5200cd(0x131),args={'q':modifiedTitle,'fl':[_0x5200cd(0x11b),_0x5200cd(0x12f),_0x5200cd(0x121),_0x5200cd(0x13e),'format'],'rows':0x23,'page':0x1,'output':_0x5200cd(0x13a)};try{var response=showtime[_0x5200cd(0x117)](apiUrl,{'args':args}),json=JSON[_0x5200cd(0x12d)](response['toString']());if(json[_0x5200cd(0x13d)]&&json[_0x5200cd(0x13d)][_0x5200cd(0x125)]&&json[_0x5200cd(0x13d)]['docs'][_0x5200cd(0x126)]>0x0){var results=[],matchedFiles=[],nonMatchedFiles=[],videoExtensions=['.mp4',_0x5200cd(0x12c),'.mkv',_0x5200cd(0x11c),_0x5200cd(0x12b),_0x5200cd(0x14b)];for(var i=0x0;i<json[_0x5200cd(0x13d)][_0x5200cd(0x125)][_0x5200cd(0x126)];i++){var doc=json[_0x5200cd(0x13d)][_0x5200cd(0x125)][i];if(doc[_0x5200cd(0x13e)]&&doc[_0x5200cd(0x13e)][_0x5200cd(0x115)](_0x5200cd(0x14a))!==-0x1)continue;var itemDetailsUrl=_0x5200cd(0x127)+doc[_0x5200cd(0x11b)],itemResponse=showtime[_0x5200cd(0x117)](itemDetailsUrl),itemJson=JSON[_0x5200cd(0x12d)](itemResponse['toString']());if(itemJson['files']){var foundFile=![];for(var j=0x0;j<itemJson[_0x5200cd(0x141)][_0x5200cd(0x126)];j++){var file=itemJson[_0x5200cd(0x141)][j],isVideoFile=videoExtensions[_0x5200cd(0x14d)](function(_0x200d9f){var _0x52aabb=_0x5200cd;return file[_0x52aabb(0x14c)][_0x52aabb(0x152)]()['indexOf'](_0x200d9f)!==-0x1;}),titleForCheck=file[_0x5200cd(0x14c)]['trim']()[_0x5200cd(0x152)]()[_0x5200cd(0x130)](/\./g,'\x20')[_0x5200cd(0x130)](/[\-:]/g,'');if(titleForCheck[_0x5200cd(0x115)](queryIdentifier)===-0x1)continue;;if(titleForCheck[_0x5200cd(0x115)](relevantTitlePart)===-0x1)continue;;var titleWithoutYear=title[_0x5200cd(0x130)](/\s*\d{4}$/,'')[_0x5200cd(0x145)]();if(titleWithoutYear[_0x5200cd(0x151)]('\x20')[_0x5200cd(0x126)]===0x1&&!hasEpisodeIdentifier&&!/(brrip|1080p|720p|xvid|dvdrip)/i[_0x5200cd(0x13f)](file['name']['toLowerCase']()))continue;var excludeJail=relevantTitlePart[_0x5200cd(0x115)](_0x5200cd(0x11e))===-0x1&&titleForCheck['indexOf'](_0x5200cd(0x11e))!==-0x1;if(excludeJail)continue;var excludeAnimated=relevantTitlePart[_0x5200cd(0x115)](_0x5200cd(0x12e))===-0x1&&titleForCheck['indexOf'](_0x5200cd(0x12e))!==-0x1;if(excludeAnimated)continue;var excludeAnimated=relevantTitlePart['indexOf'](_0x5200cd(0x137))===-0x1&&titleForCheck[_0x5200cd(0x115)](_0x5200cd(0x137))!==-0x1;if(excludeAnimated)continue;if(service['H265Filter']&&/[xXhH]265/i[_0x5200cd(0x13f)](file[_0x5200cd(0x14c)])&&modifiedTitle['indexOf'](_0x5200cd(0x12a))===-0x1)continue;if(service['H265Filter']&&/[xXhH]265/i[_0x5200cd(0x13f)](file[_0x5200cd(0x14c)])&&modifiedTitle[_0x5200cd(0x115)]('Duel\x201971')!==-0x1&&titleForCheck['indexOf'](_0x5200cd(0x11f))===-0x1)continue;var quality='Unknown';if(/1080p/i['test'](titleForCheck))quality='1080p';else{if(/720p/i[_0x5200cd(0x13f)](titleForCheck))quality=_0x5200cd(0x153);else/xvid/i[_0x5200cd(0x13f)](titleForCheck)&&(quality=_0x5200cd(0x116));}modifiedTitle[_0x5200cd(0x115)](_0x5200cd(0x12a))!==-0x1&&titleForCheck[_0x5200cd(0x115)](_0x5200cd(0x11f))!==-0x1&&(quality='480p');title[_0x5200cd(0x152)]()[_0x5200cd(0x115)](_0x5200cd(0x14f))!==-0x1&&file[_0x5200cd(0x14c)][_0x5200cd(0x152)]()[_0x5200cd(0x115)](_0x5200cd(0x136))!==-0x1&&(quality=_0x5200cd(0x116));console['log'](_0x5200cd(0x133)+titleForCheck);if(isVideoFile){var videoLink=_0x5200cd(0x138)+doc[_0x5200cd(0x11b)]+'/'+encodeURIComponent(file[_0x5200cd(0x14c)]);matchedFiles['push']({'title':file['name'],'item':videoLink,'quality':quality});}}}}if(matchedFiles['length']>0x0)for(var i=0x0;i<matchedFiles['length'];i++){var magnetLink=matchedFiles[i]['item'],quality=matchedFiles[i][_0x5200cd(0x14e)],seederCount='30',item=magnetLink+_0x5200cd(0x143)+quality+'\x20-\x20'+seederCount;results['push'](item);}else{nonMatchedFiles['sort'](function(_0xb91113,_0x49c5ce){var _0x3a5ca8=_0x5200cd;return _0xb91113[_0x3a5ca8(0x12f)][_0x3a5ca8(0x126)]-_0x49c5ce[_0x3a5ca8(0x12f)][_0x3a5ca8(0x126)];});if(nonMatchedFiles['length']>0x0&&!queryIdentifier)for(var i=0x0;i<nonMatchedFiles[_0x5200cd(0x126)];i++){var magnetLink=nonMatchedFiles[i]['item'],quality=nonMatchedFiles[i][_0x5200cd(0x14e)],seederCount='30',item=magnetLink+_0x5200cd(0x143)+quality+'\x20-\x20'+seederCount;results[_0x5200cd(0x142)](item);}}return page[_0x5200cd(0x132)]=![],results;}else return[];}catch(_0x41f974){return page[_0x5200cd(0x132)]=![],[];}function _0x74e7(){var _0x595d69=['response','subject','test','Internet\x20Archive\x20|\x20Identifier:\x20','files','push','\x20-\x20','2737294WNpGHj','trim','log','7970KHxZBZ','5402529oNdRoM','Internet\x20Archive\x20|\x20Modified\x20Query:\x20','Movie\x20Trailer','.flv','name','some','quality','uncle\x20buck','thesimpletons\x202','split','toLowerCase','720p','indexOf','480p','httpReq','Internet\x20Archive\x20|\x20No\x20year\x20found\x20in\x20the\x20title.','1572RHrPqk','994533iHXfby','identifier','.mov','sqjeargbrmdmkfm0pgf','trailer\x20park\x20boys\x20jail','x265\x20ia\x20mp4','9HLimYJ','mediatype','17396MlIOGs','5412584cHRfhT','bad\x20santa','docs','length','https://archive.org/metadata/','Internet\x20Archive\x20|\x20Relevant\x20Title\x20Part:\x20','1855220zhOvzM','Duel\x201971','.wmv','.avi','parse','trailer\x20park\x20boys\x20the\x20animated\x20series','title','replace','https://archive.org/advancedsearch.php','loading','Internet\x20Archive\x20|\x20Title\x20For\x20Check:\x20','3sZCKaL','12rBlLWv','bbc','trailer\x20park\x20boys\x20out\x20of\x20the\x20park','https://archive.org/download/','the\x20simpsons','json','trailer\x20park\x20boys','match'];_0x74e7=function(){return _0x595d69;};return _0x74e7();}
+var relevantTitlePartMatch = title.match(/^(.*?)(?:\sS\d{2}E\d{2}|\s\d{4})/i);
+    var relevantTitlePart = relevantTitlePartMatch[1].trim().toLowerCase().replace(/\./g, ' ').replace(/[\-:]/g, '');
+
+
+    //page.appendItem("", "separator", { title: "Relevant Title Part: " + relevantTitlePart });
+
+
+    page.loading = true;
+    var query = title;
+    var episodeIdentifier = query.match(/s\d+e\d+/gi);
+    var identifier;
+
+    if (!episodeIdentifier) {
+        var identifier = query.match(/\d{4}/i);
+    }
+
+    
+
+    if (query.toLowerCase().indexOf('king of the hill') !== -1) {
+        modifiedQuery = 'king-of-the-hill13seasons';
+    } else if (query.toLowerCase().indexOf('trailer park boys') !== -1) {
+        modifiedQuery = 'doopey poopy';
+    } else if (query.toLowerCase().indexOf('the simpsons') !== -1) {
+        modifiedQuery = 'thesimpletons 2';
+    } else if (query.toLowerCase().indexOf('bad santa') !== -1) {
+        modifiedQuery = 'sqjeargbrmdmkfm0pgf';
+    } else if (episodeIdentifier) {
+        modifiedQuery = relevantTitlePart;
+    } else {
+        modifiedQuery = query
+    }
+
+    //page.appendItem("", "separator", { title: "Modified Query: " + modifiedQuery });
+
+    var apiUrl = "https://archive.org/advancedsearch.php";
+
+    var args = {
+        q: modifiedQuery,
+        fl: ["identifier", "title", "mediatype", "subject", "format"],
+        sort: "downloads desc",
+        rows: 35,
+        page: 1,
+        output: "json"
+    };
+
+    try {
+        var response = showtime.httpReq(apiUrl, {
+            args: args
+        });
+
+        var json = JSON.parse(response.toString());
+
+        if (json.response && json.response.docs && json.response.docs.length > 0) {
+            var results = [];
+            var matchedFiles = [];
+            var nonMatchedFiles = [];
+            var videoExtensions = ['.mp4', '.avi', '.mkv', '.mov', '.wmv', '.flv'];
+
+            // Create a new cleaned query variable
+            var cleanedQuery = relevantTitlePart;
+
+            // Iterate over each document in the response
+            for (var i = 0; i < json.response.docs.length; i++) {
+                var doc = json.response.docs[i];
+
+                if (doc.subject && doc.subject.indexOf('Movie Trailer') !== -1) {
+                    continue;
+                }
+
+                var itemDetailsUrl = "https://archive.org/metadata/" + doc.identifier;
+                var itemResponse = showtime.httpReq(itemDetailsUrl);
+                var itemJson = JSON.parse(itemResponse.toString());
+
+                // Check if there are files
+                if (itemJson.files) {
+                    var foundFile = false;
+
+                    // Iterate over files to find matching episode or movie
+                    for (var j = 0; j < itemJson.files.length; j++) {
+                        var file = itemJson.files[j];
+
+                        
+                        //page.appendItem("", "separator", { title: "File Found: " + file.name });
+                        
+
+                        // Check if the file is a video file
+                        var isVideoFile = false;
+                        for (var k = 0; k < videoExtensions.length; k++) {
+                            if (file.name.toLowerCase().indexOf(videoExtensions[k]) !== -1) {
+                                isVideoFile = true;
+                                break;
+                            }
+                        }
+
+                       
+                        //page.appendItem("", "separator", { title: "Relevant Title: " + relevantTitlePart });
+
+
+                        var titleForCheck = file.name.trim().toLowerCase().replace(/\./g, ' ').replace(/[\-:]/g, '');
+                        if (titleForCheck.indexOf(relevantTitlePart) === -1) continue;
+                        //page.appendItem("", "separator", { title: "Identifier: " + identifier });
+                        if (!episodeIdentifier && titleForCheck.indexOf(identifier) === -1) continue;
+
+
+                        if (query.toLowerCase().indexOf('duel') !== -1 && file.name.toLowerCase().indexOf('duel_1971.mp4') !== -1 ) {continue;}
+                        if (query.toLowerCase().indexOf('uncle buck') !== -1 && file.name.toLowerCase().indexOf('bbc') !== -1 ) {quality = "480p";}
+                        if (query.toLowerCase().indexOf('trains and automobiles') !== -1 && file.name.toLowerCase().indexOf(".ia.mp4") === -1) {continue;}
+
+                        //page.appendItem("", "separator", { title: "File Found: " + file.name });
+                        
+                        var excludeJail = relevantTitlePart.indexOf('trailer park boys jail') === -1 && titleForCheck.indexOf('trailer park boys jail') !== -1;
+                        if (excludeJail) continue;
+
+                        var excludeAnimated = relevantTitlePart.indexOf('trailer park boys the animated series') === -1 && titleForCheck.indexOf('trailer park boys the animated series') !== -1;
+                        if (excludeAnimated) continue;
+
+                        var excludeAnimated = relevantTitlePart.indexOf('trailer park boys out of the park') === -1 && titleForCheck.indexOf('trailer park boys out of the park') !== -1;
+                        if (excludeAnimated) continue;
+
+                        if (/[xXhH]265/i.test(file.name)) {var codec = 'H265';};
+                        /*
+                        var quality = "Unknown";
+                        if (/1080p/i.test(titleForCheck)){
+                            quality = "1080p";
+                        } else if (/720p/i.test(titleForCheck)){
+                            quality = "720p";
+                        } else if (/XviD/i.test(titleForCheck)){
+                            quality = "480p";
+                        }*/
+
+                        if (episodeIdentifier && file.name.toLowerCase().indexOf(episodeIdentifier[0].toLowerCase()) !== -1 && isVideoFile) {
+                            foundFile = true;
+                            var videoLink = "https://archive.org/download/" + doc.identifier + "/" + encodeURIComponent(file.name);
+                            matchedFiles.push({ title: file.name, item: videoLink, quality: quality, codec: codec });
+                        } else if (isVideoFile) {
+                            var queryWords = cleanedQuery.toLowerCase().split(/\s+/);
+
+                            if (queryWords.every(function(word) {
+                                return file.name.toLowerCase().indexOf(word) !== -1;
+                            })) {
+                                var videoLink = "https://archive.org/download/" + doc.identifier + "/" + encodeURIComponent(file.name);
+                                nonMatchedFiles.push({ title: file.name, item: videoLink, quality: quality, codec: codec });
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Append matched files if any
+            if (matchedFiles.length > 0) {
+                for (var i = 0; i < matchedFiles.length; i++) {
+                    var magnetLink = matchedFiles[i].item;
+                    var quality = matchedFiles[i].quality;
+                    var codec = matchedFiles[i].codec;
+                    var seederCount = '60'; // Dummy value - since we're not actually dealing with torrents
+                    //page.appendItem("", "separator", { title: "Quality Selected: " + quality });
+
+                    var item = magnetLink + " - " + quality || 'Unknown' + " - " + seederCount + " - " + codec || 'Unknown';
+                    results.push(item);
+                }
+            } else {
+                // Sort nonMatchedFiles by the length of the title
+                nonMatchedFiles.sort(function(a, b) {
+                    return a.title.length - b.title.length;
+                });
+
+                if (nonMatchedFiles.length > 0 && !episodeIdentifier) {
+                    for (var i = 0; i < nonMatchedFiles.length; i++) {
+                        var magnetLink = nonMatchedFiles[i].item;
+                        var quality = nonMatchedFiles[i].quality;
+                        var codec = nonMatchedFiles[i].codec;
+                        var seederCount = '60'; // Dummy value - since we're not actually dealing with torrents
+                        //page.appendItem("", "separator", { title: "Quality Selected: " + quality });
+
+                        var item = magnetLink + " - " + quality || 'Unknown' + " - " + seederCount + " - " + codec || 'Unknown';
+                        results.push(item);
+                    }
+                } else {
+                    return [];
+                }
+            }
+            page.loading = false;
+            return results;
+        } else {
+            return [];
+        }
+    } catch (error) {
+        //showtime.trace("Error fetching data from Internet Archive: " + error);
+        page.loading = false;
+        return [];
+    }
