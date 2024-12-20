@@ -116,10 +116,11 @@ var relevantTitlePartMatch = title.match(/^(.*?)(?:\sS\d{2}E\d{2}|\s\d{4})/i);
 
                         var excludeAnimated = relevantTitlePart.indexOf('trailer park boys out of the park') === -1 && titleForCheck.indexOf('trailer park boys out of the park') !== -1;
                         if (excludeAnimated) continue;
-
+                        
+                        var codec = "Unknown";
                         if (/[xXhH]265/i.test(file.name)) {var codec = 'H265';};
-                        /*
-                        var quality = "Unknown";
+                        
+                        var quality = "Unknown";/*
                         if (/1080p/i.test(titleForCheck)){
                             quality = "1080p";
                         } else if (/720p/i.test(titleForCheck)){
