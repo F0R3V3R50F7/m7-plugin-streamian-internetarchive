@@ -66,6 +66,9 @@ var relevantTitlePartMatch = title.match(/^(.*?)(?:\sS\d{2}E\d{2}|\s\d{4})/i);
                 if (doc.subject && doc.subject.indexOf('Movie Trailer') !== -1) {
                     continue;
                 }
+                var codec = "Unknown";
+
+                if (/[xXhH]265/i.test(doc.format)) {var codec = 'H265';};
 
                 var itemDetailsUrl = "https://archive.org/metadata/" + doc.identifier;
                 var itemResponse = showtime.httpReq(itemDetailsUrl);
@@ -122,7 +125,7 @@ var relevantTitlePartMatch = title.match(/^(.*?)(?:\sS\d{2}E\d{2}|\s\d{4})/i);
                         var excludeAnimated = relevantTitlePart.indexOf('trailer park boys out of the park') === -1 && titleForCheck.indexOf('trailer park boys out of the park') !== -1;
                         if (excludeAnimated) continue;
                         
-                        var codec = "Unknown";
+                        
                         if (/[xXhH]265/i.test(file.name)) {var codec = 'H265';};
                         
                         var quality = "Unknown";/*
