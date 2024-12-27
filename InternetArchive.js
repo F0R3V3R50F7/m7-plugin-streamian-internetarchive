@@ -93,12 +93,12 @@ var relevantTitlePartMatch = title.match(/^(.*?)(?:\sS\d{2}E\d{2}|\s\d{4})/i);
                         }
 
                        
-                        console.log("InternetArchive | Relevant Title Part: " + relevantTitlePart);
+                        //console.log("InternetArchive | Relevant Title Part: " + relevantTitlePart);
 
 
                         var titleForCheck = file.name.trim().toLowerCase().replace(/\./g, ' ').replace(/[\-:]/g, '');
                         //if (titleForCheck.indexOf(relevantTitlePart) === -1) continue;
-                        if (titleForCheck.indexOf(relevantTitlePart) === -1 && relevantTitlePart === 'steptoe and son') continue;
+                        if (titleForCheck.indexOf(relevantTitlePart) === -1 && relevantTitlePart.indexOf('steptoe and son') === -1) continue;
                         //page.appendItem("", "separator", { title: "Identifier: " + identifier });
                         if (!episodeIdentifier && titleForCheck.indexOf(identifier) === -1) continue;
 
