@@ -71,8 +71,9 @@ var relevantTitlePartMatch = title.match(/^(.*?)(?:\sS\d{2}E\d{2}|\s\d{4})/i);
                 var itemResponse = showtime.httpReq(itemDetailsUrl);
                 var itemJson = JSON.parse(itemResponse.toString());
 
-                if (!itemDetailsUrl.indexOf('only-fools') && !relevantTitlePart.indexOf('steptoe')) continue;
-                if (!itemDetailsUrl.indexOf('steptoe') && !relevantTitlePart.indexOf('only fools')) continue;
+                if (itemDetailsUrl.indexOf('only-fools') !== -1 && relevantTitlePart.indexOf('steptoe') !== -1) continue;
+                if (itemDetailsUrl.indexOf('steptoe') !== -1 && relevantTitlePart.indexOf('only fools') !== -1) continue;
+
 
                 // Check if there are files
                 if (itemJson.files) {
