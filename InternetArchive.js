@@ -93,7 +93,7 @@ var relevantTitlePartMatch = title.match(/^(.*?)(?:\sS\d{2}E\d{2}|\s\d{4})/i);
                         }
 
                        
-                        console.log(InternetArchive | Relevant Title Part: " + relevantTitlePart);
+                        //console.log(InternetArchive | Relevant Title Part: " + relevantTitlePart);
 
 
                         var titleForCheck = file.name.trim().toLowerCase().replace(/\./g, ' ').replace(/[\-:]/g, '');
