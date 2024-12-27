@@ -97,7 +97,8 @@ var relevantTitlePartMatch = title.match(/^(.*?)(?:\sS\d{2}E\d{2}|\s\d{4})/i);
 
 
                         var titleForCheck = file.name.trim().toLowerCase().replace(/\./g, ' ').replace(/[\-:]/g, '');
-                        if (titleForCheck.indexOf(relevantTitlePart) === -1) continue;
+                        //if (titleForCheck.indexOf(relevantTitlePart) === -1) continue;
+                        if (titleForCheck.indexOf(relevantTitlePart) === -1 && relevantTitlePart === 'steptoe and son') continue;
                         //page.appendItem("", "separator", { title: "Identifier: " + identifier });
                         if (!episodeIdentifier && titleForCheck.indexOf(identifier) === -1) continue;
 
