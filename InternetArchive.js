@@ -2,7 +2,7 @@ var relevantTitlePartMatch = title.match(/^(.*?)(?:\sS\d{2}E\d{2}|\s\d{4})/i);
     var relevantTitlePart = relevantTitlePartMatch[1].trim().toLowerCase().replace(/\./g, ' ').replace(/[\-:]/g, '');
 
 
-    //page.appendItem("", "separator", { title: "Relevant Title Part: " + relevantTitlePart });
+    console.log("Relevant Title Part: " + relevantTitlePart);
 
 
     page.loading = true;
@@ -30,7 +30,7 @@ var relevantTitlePartMatch = title.match(/^(.*?)(?:\sS\d{2}E\d{2}|\s\d{4})/i);
         modifiedQuery = query
     }
 
-    //page.appendItem("", "separator", { title: "Modified Query: " + modifiedQuery });
+    console.log("Modified Query: " + modifiedQuery);
 
     var apiUrl = "https://archive.org/advancedsearch.php";
 
@@ -93,7 +93,7 @@ var relevantTitlePartMatch = title.match(/^(.*?)(?:\sS\d{2}E\d{2}|\s\d{4})/i);
                         }
 
                        
-                        //page.appendItem("", "separator", { title: "Relevant Title: " + relevantTitlePart });
+                        console.log(Relevant Title: " + relevantTitlePart);
 
 
                         var titleForCheck = file.name.trim().toLowerCase().replace(/\./g, ' ').replace(/[\-:]/g, '');
