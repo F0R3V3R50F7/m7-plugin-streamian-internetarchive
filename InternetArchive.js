@@ -128,14 +128,17 @@ try {
 
 					if (/[xXhH]265/i.test(file.name)) {var codec = 'H265';};
 
-					/*
 					if (/1080p/i.test(titleForCheck)){
 						quality = "1080p";
 					} else if (/720p/i.test(titleForCheck)){
 						quality = "720p";
 					} else if (/XviD/i.test(titleForCheck)){
 						quality = "480p";
-					}*/
+					}
+
+					if (quality = 'Unknown' && query.toLowerCase().indexOf('trailer park boys') !== -1) {quality = "480p";}
+                    if (quality = 'Unknown' && query.toLowerCase().indexOf('the osbournes') !== -1) {quality = "480p";}
+					if (quality = 'Unknown' && query.toLowerCase().indexOf('king of the hill') !== -1) {quality = "480p";}
 
 					if (episodeIdentifier && file.name.toLowerCase().indexOf(episodeIdentifier[0].toLowerCase()) !== -1 && isVideoFile) {
 						foundFile = true;
