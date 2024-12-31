@@ -113,18 +113,6 @@ try {
 					if (query.toLowerCase().indexOf('duel') !== -1 && file.name.toLowerCase().indexOf('duel_1971.mp4') !== -1 ) {continue;}
 					if (query.toLowerCase().indexOf('uncle buck') !== -1 && file.name.toLowerCase().indexOf('bbc') !== -1 ) {quality = "480p";} else {quality = 'Unknown';}
 					if (query.toLowerCase().indexOf('trains and automobiles') !== -1 && file.name.toLowerCase().indexOf(".ia.mp4") === -1) {continue;}
-                    if (query.toLowerCase().indexOf('crash canyon') !== -1) {file.name = file.name.replace(/_/g, '');}
-                    if (query.toLowerCase().indexOf('crash canyon') !== -1 && file.name.toLowerCase().indexOf('s01e19') !== -1 && file.name.toLowerCase().indexOf('.mp4') !== -1) {file.name = 'S02E01 - Vernon Loves Carol and Cake-quicktime.mp4';}
-                    if (query.toLowerCase().indexOf('crash canyon') !== -1 && file.name.toLowerCase().indexOf('s01e20') !== -1 && file.name.toLowerCase().indexOf('.mp4') !== -1) {file.name = 'S02E02 - For Norm the Sell Tolls-quicktime.mp4';}
-                    if (query.toLowerCase().indexOf('crash canyon') !== -1 && file.name.toLowerCase().indexOf('s01e21') !== -1 && file.name.toLowerCase().indexOf('.mp4') !== -1) {file.name = 'S02E03 - Station WNDL-quicktime.mp4';}
-                    if (query.toLowerCase().indexOf('crash canyon') !== -1 && file.name.toLowerCase().indexOf('s01e22') !== -1 && file.name.toLowerCase().indexOf('.mp4') !== -1) {file.name = 'S02E04 - Over-Flubbed-quicktime.mp4';}
-                    if (query.toLowerCase().indexOf('crash canyon') !== -1 && file.name.toLowerCase().indexOf('s01e23') !== -1 && file.name.toLowerCase().indexOf('.mp4') !== -1) {file.name = 'S02E05 - Trash Canyon-quicktime.mp4';}
-                    if (query.toLowerCase().indexOf('crash canyon') !== -1 && file.name.toLowerCase().indexOf('s01e24') !== -1 && file.name.toLowerCase().indexOf('.mp4') !== -1) {file.name = 'S02E06 - The Wrath of Vaughn-quicktime.mp4';}
-                    if (query.toLowerCase().indexOf('crash canyon') !== -1 && file.name.toLowerCase().indexOf('s01e25') !== -1 && file.name.toLowerCase().indexOf('.mp4') !== -1) {file.name = 'S02E07 - A Bun in the Canyon-quicktime.mp4';}
-                    if (query.toLowerCase().indexOf('crash canyon') !== -1 && file.name.toLowerCase().indexOf('s01e26') !== -1 && file.name.toLowerCase().indexOf('.mp4') !== -1) {file.name = 'S02E08 - A Bun in the Canyon-quicktime.mp4';}
-                    if (query.toLowerCase().indexOf('crash canyon') !== -1 && file.name.toLowerCase().indexOf('s01e26') !== -1 && file.name.toLowerCase().indexOf('.mp4') !== -1) {file.name = 'S02E08 - A Bun in the Canyon-quicktime.mp4';}
-                    if (query.toLowerCase().indexOf('crash canyon') !== -1 && file.name.toLowerCase().indexOf('.mov') !== -1) {continue;}
-                    if (query.toLowerCase().indexOf('crash canyon') !== -1) {quality = "480p";}
 
 					console.log("File Found: " + file.name);
 
@@ -148,6 +136,8 @@ try {
 					} else if (/XviD/i.test(titleForCheck)){
 						quality = "480p";
 					}*/
+
+					if (quality = 'Unknown' && query.toLowerCase().indexOf('trailer park boys') !== -1) {quality = "480p";}
 
 					if (episodeIdentifier && file.name.toLowerCase().indexOf(episodeIdentifier[0].toLowerCase()) !== -1 && isVideoFile) {
 						foundFile = true;
