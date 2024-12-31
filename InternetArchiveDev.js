@@ -125,7 +125,8 @@ try {
                     if (query.toLowerCase().indexOf('crash canyon') !== -1 && file.name.toLowerCase().indexOf('s01e26') !== -1 && file.name.toLowerCase().indexOf('.mp4') !== -1) {file.name = 'S02E08 - A Bun in the Canyon-quicktime.mp4';}
                     if (query.toLowerCase().indexOf('crash canyon') !== -1 && file.name.toLowerCase().indexOf('.mov') !== -1) {continue;}
                     if (query.toLowerCase().indexOf('crash canyon') !== -1) {quality = "480p";}
-					//page.appendItem("", "separator", { title: "File Found: " + file.name });
+
+					console.log("File Found: " + file.name);
 
 					var excludeJail = relevantTitlePart.indexOf('trailer park boys jail') === -1 && titleForCheck.indexOf('trailer park boys jail') !== -1;
 					if (excludeJail) continue;
